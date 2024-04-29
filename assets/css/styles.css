@@ -1,0 +1,84 @@
+:root{
+    --bg: #e7e2df;
+    --card: #ffffff;
+    --primary: #02738f;
+
+
+
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--bg);
+}
+#root{
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 'nav nav'
+    'aside section'
+    'footer footer';
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: nav;
+    background-color: var(--primary)
+}
+.categorias{
+    grid-area: aside;
+    background-color: var(--bg);
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+}
+.categorias ul{
+    display: flex;
+    flex-direction: column;
+    line-height: 1rem;
+    padding: 1rem;
+}
+
+.categorias ul li{
+    list-style: none;
+    margin: 0px;
+}
+.categorias a{
+    text-decoration: none;
+    color: black;
+}
+.galeria{
+    grid-area: section;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2rem 1rem;
+    background-color: var(--bg);
+
+}
+.galeria .card{
+    display: flex;
+    min-height: 100px;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--card);
+    
+}
+.galeria .card button{
+    width: 100%;
+    background-color: var(--primary);
+
+}
+.galeria .card img{
+    width: 100%;
+    height: 300px;
+    
+}
+footer{
+    grid-area: footer;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--card);
+}
